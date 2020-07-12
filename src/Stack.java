@@ -9,7 +9,7 @@ public class Stack<T> {
         this.top = 0;
         this.array = (T[]) new Object[1];
     }
-    
+
     public void push(T value)
     {
         _growIfNeeded();
@@ -50,7 +50,10 @@ public class Stack<T> {
             array = newArray;
         }
     }
-
+    public boolean isEmpty()
+    {
+        return top == 0;
+    }
     public String toString()
     {
         String retVal = "";
